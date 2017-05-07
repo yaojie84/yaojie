@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            font-family: monospace;
+        }
+        img {
+            width: 100%;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .col-1 {
+            width: 980px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .col-2 {
+            width: 450px;
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+        
+        .col-3 {
+            width: calc(1000px/3 - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+        
+        nav {
+            height: 60px;
+            background-color: black;
+        }
+        
+        nav .logo {
+            width: 60px;
+            height: 60px;
+            float: left;
+            background-color: #ef4343;
+        }
+        
+        nav .menu {
+            float: right;
+        }
+        
+        nav .menu li {
+            float: left;
+            list-style: none;
+        }
+        
+        nav .menu a {
+            display: block;
+            letter-spacing: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+        
+        header {
+            padding-top:640px;
+            padding-bottom: 472px;
+            background-image: url(images/1b77.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #about .col-2:nth-of-type(2) {
+            text-align: center;
+        }
+        
+        #about .col-2:nth-of-type(2) img {
+            width: 300px;
+            height: 300px;
+        }
+        
+        #about,#portfolio {
+            margin-top: 0px;
+            margin-bottom: 100px;
+        }
+        #portfolio {
+            background-color: #646464;
+        }
+        #portfolio .col-3 {
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        #portfolio .fixed-width:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: black;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        
+        #blog .col-2,
+        .btn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo"><img src="images/ua-2-1.jpg" alt=""></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">作品</a></li>
+                    <li><a href="#">清單</a></li>
+                    <li><a href="#">關於</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width clearfix" id="about">
+        <div class="fixed-width">
+            <div class="col-2">
+                <h2>pooo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet saepe cumque obcaecati voluptates qui ratione cum voluptatem ex exercitationem ducimus mollitia, nihil, sint eligendi delectus nulla velit consequatur voluptas est?</p>
+            </div>
+            <div class="col-2">
+                <img src="images/01.jpg" alt="">
+            </div>
+        </div>
+    </header>
+    <div class="full-width clearfix" id="portfolio">
+        <div class="fixed-width">
+            <div class="col-3"><img src="images/01.jpg" alt=""></div>
+            <div class="col-3"><img src="images/02.jpg" alt=""></div>
+            <div class="col-3"><img src="images/03.jpg" alt=""></div>
+
+        </div>
+    </div>
+    <div>
+        <div class="full-width clearfix" >
+            <div class="fixed-width">
+                <div class="col-2">
+                    <h3>lglgl</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iure optio asperiores obcaecati temporibus libero aliquid porro suscipit laudantium tempora cum culpa, dolore veniam! Similique animi eligendi maxime doloribus rerum!</p>
+                    <a href="#" class="btn">PP</a>
+                </div>
+                   <div class="col-2">
+                    <h3>lglgl</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iure optio asperiores obcaecati temporibus libero aliquid porro suscipit laudantium tempora cum culpa, dolore veniam! Similique animi eligendi maxime doloribus rerum!</p>
+                    <a href="#" class="btn">PP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="full-width clearfix" >
+        <div class="fixed-width">
+            <p>
+                2017 &copy; All Rights Reserved
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

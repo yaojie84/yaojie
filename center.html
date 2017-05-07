@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            height: 400px;
+            background-color: aquamarine;
+            vertical-align: middle;
+             text-align: justify;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .box {
+           display: inline-block;
+          vertical-align: middle;
+          width: 200px;
+         height: 200px;
+            background-color:#a1bfcb;
+        }
+        .clearfix::before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sapiente obcaecati sunt sequi nesciunt, hic commodi rerum doloribus similique delectus enim excepturi, impedit laboriosam, saepe quas iste omnis harum deleniti.
+        </div>
+        <div class="box"><img src="images/05.jpg" alt=""></div>
+    </div>
+</body>
+</html>
