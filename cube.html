@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            perspective: 800px;
+            position: relative;
+            margin: 20% auto;
+        }
+        .cube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(30deg)rotateX(65deg);
+        }   
+        .cube div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+        }
+        .front {background-color: antiquewhite;
+            transform: translateZ(100px);}
+        .back {background-color: aqua;
+            transform: rotateY(180deg)translateZ(100ps);}
+        .left {background-color: aquamarine;
+            transform: rotateY(-90deg)translateZ(100ps);}
+        .right {background-color: azure;
+            transform: rotateY(90deg)translateZ(100ps);}
+        .top {background-color: #414135;
+            transform: rotateX(90deg)translateZ(100ps);}
+        .bottom {background-color: #d6bb9b;
+            transform: rotateX(-90deg)translateZ(100ps);}
+        
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
