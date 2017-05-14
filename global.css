@@ -1,0 +1,25 @@
+@media screen and (max-width:1200px){
+body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            font-family: monospace;
+        }
+    .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+}

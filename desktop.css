@@ -1,0 +1,120 @@
+@media screen and (min-width:480px){
+.full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .col-1 {
+            width: 980px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .col-2 {
+            width: 450px;
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+        
+        .col-3 {
+            width: calc(1000px/3 - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+        
+        nav {
+            height: 60px;
+            background-color: black;
+        }
+        
+        nav .logo {
+            width: 60px;
+            height: 60px;
+            float: left;
+            background-color: #ef4343;
+        }
+        
+        nav .menu {
+            float: right;
+        }
+        
+        nav .menu li {
+            float: left;
+            list-style: none;
+        }
+        
+        nav .menu a {
+            display: block;
+            letter-spacing: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+    nav a:hover {
+        color: darkred;
+    }
+        header {
+            padding-top:640px;
+            padding-bottom: 472px;
+            background-image: url(images/1b77.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #about .col-2:nth-of-type(2) {
+            text-align: center;
+        }
+        
+        #about .col-2:nth-of-type(2) img {
+            width: 300px;
+            height: 300px;
+        }
+        
+        #about,#portfolio {
+            margin-top: 0px;
+            margin-bottom: 100px;
+        }
+        #portfolio {
+            background-color: #646464;
+        }
+        #portfolio .col-3 {
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        #portfolio .fixed-width:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: black;
+            color: aliceblue;
+            text-decoration: none;
+        }
+       .btn:hover{
+        background-color: darkgrey;
+            color: #ff0101;
+    }
+        #blog .col-2,
+        .btn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+ img {
+            width: 100%;
+        }
+        
+}
