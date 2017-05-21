@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes ani {
+            from{left: 0;}
+            to{left: 500px;}
+        }
+         @keyframes ani1 {
+            0%{transform: rotate(0);}
+            50%{transform: rotate(30deg);}
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes square {
+            0%{top: 0;left: 0;}
+            25%{top: 0; left: 450px;}
+            50%{top: 450px;left: 450px;}
+            75%{top: 450px;left: 0;}
+            100%{top: 0;left: 0;}
+            }
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #16654b;
+            top: 0;
+            left: 0;
+            animation: square 6s infinite alternate ;
+        }
+        .box1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #16654b;
+            top: 225px;
+            left: 225px;
+            animation: ani1 6s infinite alternate ;
+        }
+        .box2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #16654b;
+            top: 0;
+            left: 0;
+            animation: ani 6s infinite alternate ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
