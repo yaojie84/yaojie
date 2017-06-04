@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="n">
+    <button onclick="go()">輸入</button>
+    <div id="output"></div>
+    <script>
+        var answer = Math.round(Math.random() * 100);
+        console.log(answer);
+
+        function go() {
+            var n = document.getElementById("n").value;
+            console.log(n);
+            if (isNaN(n)) {
+                document.getElementById("output").innerHTML = "請輸入數值";
+            } else {
+                if (n > answer) {
+                    document.getElementById("output").innerHTML = "小點";
+                } else if (n < answer) {
+                    document.getElementById("output").innerHTML = "大點";
+                } else if (n == answer) {
+                    document.getElementById("output").innerHTML = "good";
+                    alert("0_0 GOOD!!!!!!?",location.reload());
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

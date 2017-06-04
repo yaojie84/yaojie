@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        h1 {
+            cursor: pointer;
+        }
+        h1:hover {
+            color: cadetblue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>$(document).ready(function(){
+            $("p").hide();
+            $("h1").click(function() {
+                $(this).next().slideToggle(700);
+            });
+            $("h1").hover(function() {
+                $(this).next().stop().slideToggle(700);
+            });
+        });
+    </script>
+</head> 
+<body>
+    <div class="container">
+        <h1>poq</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, maxime perspiciatis nulla commodi. Dignissimos excepturi sequi nostrum pariatur nam repellat, nihil soluta provident deserunt voluptatibus. In quibusdam repellat ad possimus.
+        </p>
+        <h1>poq</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, maxime perspiciatis nulla commodi. Dignissimos excepturi sequi nostrum pariatur nam repellat, nihil soluta provident deserunt voluptatibus. In quibusdam repellat ad possimus.
+        </p>
+        <h1>poq</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, maxime perspiciatis nulla commodi. Dignissimos excepturi sequi nostrum pariatur nam repellat, nihil soluta provident deserunt voluptatibus. In quibusdam repellat ad possimus.
+        </p>
+        <h1>poq</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, maxime perspiciatis nulla commodi. Dignissimos excepturi sequi nostrum pariatur nam repellat, nihil soluta provident deserunt voluptatibus. In quibusdam repellat ad possimus.
+        </p>
+    </div>
+</body>
+</html>
