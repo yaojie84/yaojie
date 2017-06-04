@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 800px;
+            margin: auto;
+        }
+        
+        body {
+            background-color: darkgrey;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".slider").bxSlider({
+                mode: "fade",
+                auto: true,
+                speed: 1000,
+                pause: 4000
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <ul class="slider">
+            <li><img src="images/01.jpg" alt="" title="ouyukh"></li>
+            <li><img src="images/02.jpg" alt=""></li>
+            <li><img src="images/03.jpg" alt=""></li>
+            <li><img src="images/04.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
