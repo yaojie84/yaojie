@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/lightbox.css">
     <style>
+        .container {
+            margin: auto;
+        }
+        
         .box {
             width: 250px;
-            padding: 15px;
+            /*            padding: 15px;*/
             border: 1px solid #556;
-            margin: 2px;
+            margin: 5px;
+        }
+        img {
+            width: 250px;
+            
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(".container").masonry();
+            $(".container").imagesLoaded(function() {
+                $(".container").masonry({
+                    isFitWidth: true
+                });
+            });
         });
     </script>
 </head>
@@ -26,12 +41,17 @@
             <p>
                 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequi incidunt ipsum, ad, vero minima nesciunt? Eum architecto amet deserunt distinctio. Fuga, deleniti.or sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequ
             </p>
+             <a href="images/07.jpg" data-lightbox="5">
+            <img src="images/07.jpg" alt="">
+        </a>
             <p>
                 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, distinctio, explicabo. Nulla sapiente esse corporis deserunt ullam, qui et, ratione aliquam, eum minima alias aspernatur debitis! Quo pariatur, alias praesentium!or sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequ
             </p>
         </div>
         <div class="box">
-
+ <a href="images/06.jpg" data-lightbox="5">
+            <img src="images/06.jpg" alt="">
+        </a>
             <p>
                 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, distinctio, explicabo. Nulla sapiente esse corporis deserunt ullam, qui et, ratione aliquam, eum minima alias aspernatur debitis! Quo pariatur, alias praesentium!or sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequ
             </p>
@@ -45,6 +65,9 @@
             <p>
                 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequi incidunt ipsum, ad, vero minima nesciunt? Eum architecto amet deserunt distinctio. Fuga, deleniti.or sit amet, consectetur adipisicing elit. Accusamus dolorem aperiam assumenda cumque! Obcaecati, odio, soluta! Sequ
             </p>
+             <a href="images/08.jpg" data-lightbox="5">
+            <img src="images/08.jpg" alt="">
+        </a>
         </div>
         <div class="box">
             <p>

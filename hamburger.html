@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .hamburger {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            position: relative;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 40px;
+            height: 5px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            
+        }
+        
+        .hamburger span::before,
+        .hamburger span::after,
+        .hamburger-X span {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 5px;
+        }
+        
+        .hamburger span::after {
+            bottom: -15px;
+            background-color: cadetblue;
+        }
+        
+        .hamburger span::before {
+            top: -15px;
+            background-color: cadetblue;
+        }
+        
+        .hamburger-X span {
+            background-color: rgba(95, 158, 160, 0);
+/*            transition:  all .10s;*/
+        }
+        .hamburger-X span::before {
+            transform: rotate(45deg);
+            top: 0;
+/*            transition:  all .10s;*/
+        }
+        .hamburger-X span::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+/*            transition:  all .10s;*/
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".hamburger").click(function(){
+                $(this).toggleClass("hamburger-X")
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="hamburger hamburger-X">
+        <span></span>
+    </div>
+</body>
+
+</html>
