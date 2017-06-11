@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            float: left;
+        }
+        
+        img {
+            width: 500px;
+            height: auto;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/lightbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <a href="images/07.jpg" data-lightbox="5">
+            <img src="images/07.jpg" alt="">
+        </a>
+    </div>
+    <div class="box">
+        <a href="images/06.jpg" data-lightbox="5">
+            <img src="images/06.jpg" alt="">
+        </a>
+    </div>
+       <div class="box">
+        <a href="images/05.jpg" data-lightbox="5">
+            <img src="images/05.jpg" alt="">
+        </a>
+    </div>
+    
+    <script>
+        lightbox.option({
+            'resizeDuration': 100,
+            'wrapAround': true,
+            'imageFadeDuration': 100
+        })
+
+    </script>
+</body>
+
+</html>
