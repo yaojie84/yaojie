@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        
+        .gallery {
+            width: 600px;
+            height: auto;
+            font-size: 0;
+        }
+        
+        .pic {
+            margin-bottom: 15px;
+        }
+        
+        .thumbs a {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+        }
+        
+        .thumbs img {
+            width: 200%;
+            margin-left: -50%;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".thumbs a").click(function() {
+                $(".pic img").attr("src", $(this).find("img").attr("src"));
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="pic">
+            <img src="images/01.jpg" alt="">
+        </div>
+        <div class="thumbs">
+            <a href="#"><img src="images/01.jpg" alt=""></a>
+            <a href="#"><img src="images/03.jpg" alt=""></a>
+            <a href="#"><img src="images/04.jpg" alt=""></a>
+            <a href="#"><img src="images/05.jpg" alt=""></a>
+            <a href="#"><img src="images/02.jpg" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>
