@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .hamburger {
+            width: 50px;
+            height: 50px;
+            background-color: #6c6c6c;
+            position: relative;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 40px;
+            height: 5px;
+            background-color: #e6e6e6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all .10s;
+        }
+        
+        .hamburger span::before,
+        .hamburger span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 5px;
+            transition: all .6s;
+        }
+        
+        .hamburger span::after {
+            bottom: -15px;
+            background-color: #e6e6e6;
+            transition: all .6s;
+        }
+        
+        .hamburger span::before {
+            top: -15px;
+            background-color: #e6e6e6;
+            transition: all .6s;
+        }
+        
+        .hamburger-X span {
+            background-color: rgba(95, 158, 160, 0);
+            transition: all .6s;
+        }
+        
+        .hamburger-X span::before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: all .6s;
+        }
+        
+        .hamburger-X span::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+            transition: all .6s;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".hamburger").click(function() {
+                $(this).toggleClass("hamburger-X")
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="hamburger hamburger-X"><span></span></div> 
+</body>
+
+</html>
