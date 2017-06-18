@@ -1,72 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="hamburger.css">
     <style>
-        .full-width {
-            width: 100%;
+        * {
+            font-family: "Oswald";
         }
         
-        .fixed-width {
-            width: 960px;
-            margin: auto;
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
         }
         
-        nav {
-            background-color: cornsilk;
-            height: 60px;
-            background-color: black;
+        @media screen and (min-width:960px) {
+            nav {
+                background-color: #333;
+                height: 50px;
+            }
+            .full-width {
+                width: 100%;
+            }
+            .fixed-width {
+                width: 960px;
+                margin: auto;
+            }
+            nav .logo {
+                float: left;
+                width: 50px;
+                height: 50px;
+                background-color: #c4c4c4;
+            }
+            nav .menu {
+                float: right;
+                display: block;
+            }
+            nav .menu ul {
+                margin: 0;
+                padding: 0;
+            }
+            nav .menu li {
+                float: left;
+                list-style: none;
+            }
+            nav .menu a {
+                display: block;
+                text-decoration: none;
+                color: #eee;
+                margin-left: 20px;
+                line-height: 50px;
+            }
+            .hamburger {
+                display: none;
+            }
         }
         
-        nav .menu {
-            float: inherit;
-            width: 100%;
-            height: 60px;
-            background-color: #e2e2e2;
-        }
-        
-        nav .menu ul {
-            float: right;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav .menu li {
-            float: left;
-            list-style: none;
-            margin: 20px;
-        }
-        
-        nav .menu a {
-            display:block;
-            font-family: cursive;
-        }
-        
-        nav .logo {
-            float: left;
-            width: 60px;
-            height: 60px;
-            background-color: darkgrey;
+        @media screen and (max-width:960px) {
+            nav {
+                background-color: #333;
+                /*                height: 50px;*/
+            }
+            .full-width {
+                width: 100%;
+            }
+            .fixed-width {
+                width: 100%;
+                margin: auto;
+            }
+            nav .logo {
+                float: left;
+                width: 50px;
+                height: 50px;
+                background-color: #c4c4c4;
+            }
+            nav .menu {
+                /*                float: right;*/
+                display: none;
+                clear: both;
+            }
+            nav .menu ul {
+                margin: 0;
+                padding: 0;
+            }
+            nav .menu li {
+                /*                float: left;*/
+                list-style: none;
+            }
+            nav .menu a {
+                display: block;
+                text-decoration: none;
+                color: #eee;
+                margin-left: 20px;
+                line-height: 50px;
+            }
+            .hamburger {
+                display: block;
+                float: left;
+                position: fixed;
+                right: 60px;
+                top: 32px;
+            }
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            $(".hamburger").click(function() {
+                $(this).toggleClass("hamburger-x");
+                $(".menu").slideToggle(400);
+            });
+            $(window).resize(function() {
+                var w = $(this).width();
+                if (w > 960) {
+                    $(".menu").show();
+                } else {
+                    $(".menu").hide();
+                    $(".hamburger").removeClass("hamburger-x");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <nav class="full-width">
-        <div class="fixed-width">
+        <div class="fixed-width clearfix">
+            <div class="hamburger"><span></span></div>
             <div class="logo"></div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">4444</a></li>
-                    <li><a href="#">4444</a></li>
-                    <li><a href="#">4444</a></li>
-                    <li><a href="#">4444</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </body>
+
 </html>
