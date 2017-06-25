@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var myDate=new Date();
+            var Y=myDate.getFullYear();
+            var M=myDate.getMonth()+1;
+            var D=myDate.getDate();
+            var d=myDate.getDay();
+            var dAry=["日","月","火","水","木","金","土"];
+            var h =myDate.getHours();
+            var m =myDate.getMilliseconds();
+            var s =myDate.getSeconds();
+            console.log(Y);
+            console.log(M);
+            console.log(D);
+            console.log(dAry[d]);
+            console.log(h);
+            console.log(m);
+            console.log(s);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
